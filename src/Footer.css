@@ -1,0 +1,144 @@
+.footer {
+  background-color: #050404;
+  color: #F9F5F0;
+  padding: 40px 60px;
+  font-family: 'Georgia', serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #2D2C2C;
+  padding-bottom: 30px;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px 20px;
+}
+
+.logo {
+  color: #F2EAE0;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.logo span {
+  display: block;
+  font-size: 16px;
+  color: #BF9766;
+  letter-spacing: 1px;
+}
+
+.desc {
+  color: #DBC1A3;
+  font-size: 14px;
+  margin-bottom: 20px;
+  max-width: 300px;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+  transition: 0.3s ease;
+}
+
+.social-icons i {
+  cursor: pointer;
+}
+
+.social-icons i:hover {
+  color: #BF9766;
+}
+
+.footer-center h4,
+.footer-right h4 {
+  color: #BF9766;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-center ul,
+.footer-right ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-center ul li,
+.footer-right ul li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #F2EAE0;
+}
+
+.footer-center ul li:hover,
+.footer-right ul li:hover {
+  color: #BF9766;
+  cursor: pointer;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  color: #AFAFAF;
+  border-top: 1px solid #2D2C2C;
+  padding-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 20px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    margin: 15px 0;
+  }
+
+  .social-icons {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 20px;
+  }
+
+  .logo span {
+    font-size: 14px;
+  }
+
+  .desc {
+    font-size: 13px;
+  }
+
+  .footer-center h4,
+  .footer-right h4 {
+    font-size: 16px;
+  }
+
+  .footer-center ul li,
+  .footer-right ul li {
+    font-size: 13px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+  }
+}

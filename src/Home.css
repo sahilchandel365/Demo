@@ -1,0 +1,145 @@
+.home {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background: linear-gradient(to bottom, #171616, #2D2C2C);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.main {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.tagline {
+  color: #BF9766;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.main h1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 4.5rem;
+  font-weight: 300;
+  color: #F2EAE0;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.discover-btn {
+  background: transparent;
+  border: 1px solid #BF9766;
+  color: #BF9766;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.discover-btn:hover {
+  background-color: #BF9766;
+  color: #050404;
+}
+
+/* Checkbox Section */
+.checkbox {
+  width: 100%;
+  background-color: #2D2C2C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  flex-wrap: wrap;
+}
+
+.check-field {
+  display: flex;
+  flex-direction: column;
+  color: #F2EAE0;
+  min-width: 200px;
+}
+
+.check-field label {
+  margin-bottom: 0.5rem;
+}
+
+.check-field input,
+.check-field select {
+  background-color: #171616;
+  color: #F2EAE0;
+  border: 1px solid #575656;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+.check-btn {
+  background-color: #BF9766;
+  color: #050404;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.check-btn:hover {
+  background-color: #e1b585;
+}
+
+/* -------------------------
+   Responsive Design
+---------------------------- */
+@media (max-width: 768px) {
+  .main h1 {
+    font-size: 3rem;
+  }
+
+  .checkbox {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .check-field {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .discover-btn {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main h1 {
+    font-size: 2.2rem;
+  }
+
+  .tagline {
+    font-size: 0.85rem;
+  }
+
+  .check-btn {
+    width: 100%;
+  }
+
+  .home {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,180 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar container */
+.navbar {
+  background: linear-gradient(to right, #050404, #171616);
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Georgia', serif;
+  z-index: 100;
+  position: relative;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-text {
+  font-size: 24px;
+  color: #BF9766;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.logo-text span {
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+  color: #F2EAE0;
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  color: #F2EAE0;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #BF9766;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 38px;
+  left: 0;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.dropdown-menu li {
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu a {
+  color: #2D2C2C;
+  padding: 10px 15px;
+  display: block;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+}
+
+.dropdown-menu a:hover {
+  background-color: #F2EAE0;
+  color: #BF9766;
+}
+
+/* Show dropdown on hover */
+.nav-item.dropdown:hover .dropdown-menu,
+.nav-item.dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+.nav-item.dropdown {
+  position: relative;
+}
+
+.nav-item.dropdown .dropdown-menu {
+  top: 100%; /* Just below the nav item */
+  left: 0;
+}
+
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .logo {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    background-color: #050404;
+    padding: 10px 0;
+    gap: 10px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-item {
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+    border-radius: 0;
+    background-color: transparent;
+  }
+
+  .dropdown-menu a {
+    padding-left: 30px;
+    background-color: transparent;
+    color: #F2EAE0;
+  }
+
+  .dropdown-menu a:hover {
+    background-color: #171616;
+    color: #BF9766;
+  }
+}
