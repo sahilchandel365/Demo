@@ -46,7 +46,8 @@ const Footer = () => {
 
     // Log CTA addition to backend
     try {
-      await axios.post("http://localhost:5000/update-section", {
+   await axios.post("https://your-vercel-app.vercel.app/api/update-section", {
+
         component: "FooterCTA",
         field: "newCTAButton",
         value: newButton,
